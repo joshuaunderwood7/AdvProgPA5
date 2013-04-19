@@ -27,11 +27,11 @@ namespace Underwood
     {
      public:
         BinSort();
-        BinSort(char*);
+        BinSort(const char*);
         BinSort(std::list<student>&);
         ~BinSort();
 
-        bool addStudentsFromFile(char*);
+        bool addStudentsFromFile(const char*);
         bool sort(std::list<student>&);
 
         friend std::ofstream& operator << (std::ofstream& out , const BinSort &input);

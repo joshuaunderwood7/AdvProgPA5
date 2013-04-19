@@ -5,13 +5,21 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "pa5functions.h"
 
-using namespace Underwood;
 
 int main(int argc, const char *argv[])
 {
+    Underwood::GREETING();
+    if(argc != 2)
+    {
+        std::cerr  << "call program: pa5 <input file> \n output.txt is created\n";
+        return 1;
+    }
 
+    if(Underwood::PROCESSFILE(argv[1],"output.txt")) return 0;
 
-    return 0;
+    std::cerr << "could not open file\n";
+    return 2;
 }
 

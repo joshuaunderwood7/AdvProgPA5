@@ -6,7 +6,7 @@
 
 namespace Underwood
 {
-    bool PROCESSFILE(char* input_filename, char* output_filename);
+    bool PROCESSFILE(std::string input_filename, std::string output_filename);
     bool GREETING(void);
     bool ENTER_TO_CONTINUE(void);
 }

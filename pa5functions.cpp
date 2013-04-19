@@ -6,7 +6,7 @@
 //    Standard functions used by PA5
 
 #include "pa5functions.h"
-#inlcude "binsort.h"
+#include "binsort.h"
 #include <cstdio>
 #include <iostream>
 #include <fstream>
@@ -14,10 +14,10 @@
 namespace Underwood
 {
 
-bool PROCESSFILE(char* input_filename, char* output_filename)
+bool PROCESSFILE(const std::string input_filename, const std::string output_filename)
 {
-    BinSort process(input_filename);
-    std::ofstream out(output_filename);
+    BinSort process(input_filename.c_str());
+    std::ofstream out(output_filename.c_str());
     out << process;
     out.close();
 
