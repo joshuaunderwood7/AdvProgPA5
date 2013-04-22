@@ -14,7 +14,8 @@ namespace Underwood
 
     //forward declarations
     class BinSort;
-    std::ofstream& operator << (std::ofstream& out , const BinSort &input);
+//    std::ofstream& operator << (std::ofstream& out , const BinSort &input);
+    std::ostream& operator << (std::ostream& out , const BinSort &input);
 
     struct student
     {
@@ -34,7 +35,8 @@ namespace Underwood
         bool addStudentsFromFile(const char*);
         bool sort(std::list<student>&);
 
-        friend std::ofstream& operator << (std::ofstream& out , const BinSort &input);
+//        friend std::ofstream& operator << (std::ofstream& out , const BinSort &input);
+        friend std::ostream& operator << (std::ostream& out , const BinSort &input);
 
      protected:
         std::list<student> theBin[MAX_SCORE];

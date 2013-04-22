@@ -12,7 +12,7 @@
 
 namespace Underwood
 {
-
+/*
     std::ofstream& operator << (std::ofstream& out , const BinSort &input)
     {
         std::list<student>::const_iterator it;
@@ -28,7 +28,26 @@ namespace Underwood
                 }
             }
         }
-	out << "\n";
+	    out << "\n";
+        return out;
+    };
+*/
+    std::ostream& operator << (std::ostream& out , const BinSort &input)
+    {
+        std::list<student>::const_iterator it;
+        for(int i = 99; i >= 0; i--)
+        {
+            for(it = input.theBin[i].begin(); it!=input.theBin[i].end(); it++)
+            {
+                if(it->name.size() > 2)
+                {
+                    out << it->name << ",";
+                    out << it->ssn << ",";
+                    out << it->total_score << "\n";
+                }
+            }
+        }
+	    out << "\n";
         return out;
     };
 

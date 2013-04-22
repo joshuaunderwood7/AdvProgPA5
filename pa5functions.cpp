@@ -20,8 +20,16 @@ bool PROCESSFILE(const std::string input_filename, const std::string output_file
     std::ofstream out(output_filename.c_str());
     out << process;
     out.close();
-
+    return true;
 }
+
+bool PROCESSFILE(std::string input_filename, std::ostream &output_stream)
+{
+    BinSort process(input_filename.c_str());
+    output_stream << process;
+    return true;
+}
+
 
 bool GREETING(void)
 {

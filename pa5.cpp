@@ -17,7 +17,7 @@ int main(int argc, const char *argv[])
         return 1;
     }
 
-    if(Underwood::PROCESSFILE(argv[1],"output.txt")) return 0;
+    if(Underwood::PROCESSFILE(argv[1],std::cout)) return 0;
 
     std::cerr << "could not open file\n";
     return 2;
